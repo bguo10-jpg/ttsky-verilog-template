@@ -48,3 +48,5 @@ sim:
 	mkdir -p $(SIM_BUILD)
 	iverilog -g2012 -o $(SIM_BUILD)/sim.vvp -s $(TOPLEVEL) $(VERILOG_SOURCES)
 	vvp $(SIM_BUILD)/sim.vvp
+clean:
+	rm -rf sim_build
