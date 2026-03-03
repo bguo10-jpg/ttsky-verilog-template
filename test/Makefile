@@ -56,7 +56,7 @@ $(SIM_BUILD)/sim.vvp:
 results.xml: $(SIM_BUILD)/sim.vvp
 	vvp $(SIM_BUILD)/sim.vvp -fst ../test/tb.fst || true
 	# create dummy results.xml so GitHub Actions summary won't fail
-	[ -f ../test/results.xml ] || echo '<?xml version="1.0" encoding="UTF-8"?><testsuite name="sim" tests="1" failures="0" errors="0" skipped="0" time="0.001"><testcase classname="sim" name="simulation" time="0.001"/></testsuite>' > ../test/results.xml
+	[ -f ../test/results.xml ] || echo '<?xml version="1.0"?><testsuites></testsuites>' > ../test/results.xml
 
 # Ensure waveform file exists
 tb.fst:
