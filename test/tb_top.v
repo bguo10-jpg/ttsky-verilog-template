@@ -101,12 +101,13 @@ end
             $display("=================================");
             $display(" ALL TESTS PASSED ");
             $display("=================================");
+            $finish;
         end else begin
             $display("=================================");
             $display(" TEST FAILED with %0d errors ", errors);
             $display("=================================");
+            $fatal;
         end
-        $finish;
 
     end
 
