@@ -108,8 +108,6 @@ end
             $display("=================================");
             $fatal(1);
         end
-
-        $finish;
     end
 
 endmodule
