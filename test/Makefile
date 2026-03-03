@@ -42,4 +42,9 @@ TOPLEVEL = tb_top
 # COCOTB_TEST_MODULES = test
 
 # include cocotb's make rules to take care of the simulator setup
-include $(shell cocotb-config --makefiles)/Makefile.sim
+# include $(shell cocotb-config --makefiles)/Makefile.sim
+
+sim:
+	mkdir -p $(SIM_BUILD)
+	iverilog -g2012 -o $(SIM_BUILD)/sim.vvp -s $(TOPLEVEL) $(VERILOG_SOURCES)
+	vvp $(SIM_BUILD)/sim.vvp
