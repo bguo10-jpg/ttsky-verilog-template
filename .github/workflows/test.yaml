@@ -35,6 +35,7 @@ jobs:
         uses: test-summary/action@v2.3
         with:
           paths: "test/results.xml"
+          format: junit
         if: always()
 
       - name: upload waveform and test results
