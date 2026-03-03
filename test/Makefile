@@ -57,7 +57,7 @@ results.xml: $(SIM_BUILD)/sim.vvp
 	vvp $(SIM_BUILD)/sim.vvp -fst ../test/tb.fst || true
 	# create valid dummy results.xml for GitHub Actions
 	[ -d ../test ] || mkdir -p ../test
-	echo '<?xml version="1.0" encoding="UTF-8"?><testsuites><testsuite name="dummy" tests="1" failure="0"><testcase classname="dummy" name="dummy_test"/></testsuite></testsuites>' > ../test/results.xml
+	echo '<?xml version="1.0" encoding="UTF-8"?><testsuites><testsuite name="dummy" tests="1" failures="0"><testcase classname="dummy" name="dummy_test"/></testsuite></testsuites>' > ../test/results.xml
 
 # Ensure waveform file exists
 tb.fst:
