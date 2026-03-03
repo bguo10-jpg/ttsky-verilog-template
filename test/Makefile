@@ -47,7 +47,6 @@ TOPLEVEL = tb_top
 sim:
 	mkdir -p $(SIM_BUILD)
 	iverilog -g2012 -o $(SIM_BUILD)/sim.vvp -s $(TOPLEVEL) $(VERILOG_SOURCES)
-	# run simulation; ignore exit code if testbench exits with $finish
-	vvp $(SIM_BUILD)/sim.vvp || true
+	vvp $(SIM_BUILD)/sim.vvp || exit 0
 clean:
 	rm -rf sim_build
