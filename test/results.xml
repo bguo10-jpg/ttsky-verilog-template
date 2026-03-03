@@ -1,1 +1,5 @@
-<testsuites><testsuite name="dummy" tests="1" failures="0"><testcase name="test1" classname="dummy"/></testsuite></testsuites>
+<testsuites>
+  <testsuite name="Simulation" tests="1" failures="0">
+    <testcase classname="tb_top" name="verilog_sim" time="1"/>
+  </testsuite>
+</testsuites>
