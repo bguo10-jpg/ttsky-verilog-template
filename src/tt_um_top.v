@@ -10,7 +10,9 @@ module tt_um_top (
     output wire [7:0] uio_oe,   
     output wire [7:0] uo_out   
 );
-
+    assign uio_out = 8'b00000000;
+    assign uio_oe  = 8'b00000000;
+    
     // Button assignments
     wire btnU = ui_in[0];
     wire btnD = ui_in[1];
