@@ -3,6 +3,7 @@
 module tt_um_top (
     input  wire        clk,
     input  wire        rst_n,
+    input  wire       ena,
     input  wire [7:0]  ui_in,   // ui_in[0]=up, [1]=down, [2]=load, [3]=reset
     output wire [7:0]  uo_out   
 );
